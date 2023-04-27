@@ -1,0 +1,34 @@
+{% load static %}
+
+<h1> Calculadora </h1>
+
+
+
+<text> Inserte el valor el Dolares para convertirlo en Bolivares</text>
+
+
+<form  method="post">
+  {% csrf_token %}
+  <label for="dol">Monto en dolares:</label>
+  <input type="number" id="dol" name="dolar" value="{{dollars}}">
+  <input type="submit">
+</form>
+
+El monto en Bolivares es:<output name="res"> {{dolar_price}} </output>
+
+
+<br>
+<br>
+<br>
+
+<text> Inserte el valor en Bolivares para convertirlo en Dolares</text>
+
+<form  method="post">
+  {% csrf_token %}
+  <label for="dol">Monto en bolivares:</label>
+  <input type="number" id="bol" name="bolivares" value="{{bolivares}}">
+  <input type="submit">
+</form>
+
+
+El monto en Dolares es:<output name="res"> {{bols}} </output>
