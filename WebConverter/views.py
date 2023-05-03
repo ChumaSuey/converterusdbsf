@@ -25,7 +25,7 @@ def index(request: HttpRequest):
     template = 'index.html'
     return render(request = request, template_name=template, context=context)
 
-
+#eee
 
 # context["bolivares"] = bolivares
 # context["bolivares"] = bolivares / float(dolar_price)
